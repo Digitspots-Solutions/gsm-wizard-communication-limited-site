@@ -1,0 +1,49 @@
+{
+  "businessName": "GSM Wizard Communication Limited",
+  "industry": "Manufacturing",
+  "tone": "professional",
+  "tagline": "Engineering Excellence in Communication Solutions",
+  "sections": [
+    {
+      "id": "hero",
+      "name": "Hero",
+      "copy": "GSM Wizard Communication Limited - Your Trusted Partner in Communication Manufacturing. Based in Nnewi, Anambra State, we deliver world-class communication equipment and solutions that power connectivity across Nigeria. Experience precision engineering, quality manufacturing, and unmatched reliability.",
+      "imagePrompt": "Modern Nigerian manufacturing facility with state-of-the-art communication equipment assembly lines, bright industrial lighting, workers in safety gear assembling GSM devices, clean organized workspace with blue and white color scheme, professional industrial photography, high-tech machinery in background, Nnewi industrial setting",
+      "layout": "centered"
+    },
+    {
+      "id": "about",
+      "name": "About Us",
+      "copy": "GSM Wizard Communication Limited is a leading manufacturing company strategically located in Nnewi, the industrial hub of Anambra State. We specialize in the production and assembly of high-quality communication equipment, devices, and accessories that meet international standards. Our facility combines cutting-edge technology with skilled Nigerian craftsmanship to deliver products that drive digital connectivity across West Africa. With a commitment to innovation, quality control, and customer satisfaction, we have established ourselves as a trusted name in the communication manufacturing sector. Our team of experienced engineers and technicians work tirelessly to ensure every product leaving our factory meets the highest standards of performance and durability.",
+      "imagePrompt": "Professional Nigerian manufacturing plant interior, technical staff inspecting communication devices on quality control stations, modern assembly equipment, bright overhead lighting, organized warehouse shelving with packaged products, GSM equipment and circuit boards visible, industrial excellence atmosphere, real Nigerian factory environment",
+      "layout": "split"
+    },
+    {
+      "id": "services",
+      "name": "Our Services",
+      "copy": "Manufacturing of GSM Communication Devices: We produce a comprehensive range of mobile communication devices including smartphones, feature phones, and wireless communication equipment built to international quality standards.\n\nCommunication Equipment Assembly: Our facility handles complete assembly of communication hardware, from circuit board integration to final product testing and packaging.\n\nCustom Manufacturing Solutions: We offer bespoke manufacturing services for businesses requiring specialized communication equipment tailored to specific market needs.\n\nQuality Testing & Certification: Every product undergoes rigorous quality assurance testing to ensure reliability, durability, and compliance with Nigerian and international telecommunications standards.\n\nBulk Supply & Distribution: We provide wholesale supply of communication devices and equipment to retailers, distributors, and corporate clients across Nigeria.\n\nTechnical Support & Warranty Services: Comprehensive after-sales support including technical assistance, repairs, and warranty coverage for all manufactured products.",
+      "imagePrompt": "Grid display of various communication manufacturing services, Nigerian factory workers assembling mobile devices, quality testing equipment with LED displays, warehouse with neatly stacked boxes of GSM products, technical diagrams and blueprints, modern industrial setting with safety standards, professional service showcase photography",
+      "layout": "grid"
+    },
+    {
+      "id": "team",
+      "name": "Our Team",
+      "copy": "At GSM Wizard Communication Limited, our strength lies in our people. Our team comprises highly skilled engineers, experienced production managers, certified quality control specialists, and dedicated support staff who bring years of manufacturing expertise to every project. Trained in the latest communication technology and manufacturing processes, our workforce combines technical precision with Nigerian innovation. From our production floor to our management team, every member is committed to maintaining the excellence that has made us a trusted name in communication manufacturing. We invest continuously in staff training and development to ensure we remain at the forefront of communication technology manufacturing in Nigeria.",
+      "imagePrompt": "Diverse team of Nigerian manufacturing professionals in a modern factory setting, engineers examining circuit boards, quality control specialists with testing equipment, production managers coordinating assembly lines, workers in branded uniforms and safety gear, collaborative teamwork atmosphere, Nnewi industrial facility backdrop, professional corporate photography",
+      "layout": "cards"
+    },
+    {
+      "id": "contact",
+      "name": "Contact Us",
+      "copy": "Ready to discuss your communication equipment manufacturing needs? GSM Wizard Communication Limited is here to serve you. Visit our facility in Nnewi or reach out to us directly. Whether you need bulk orders, custom manufacturing solutions, or technical consultation, our team is ready to provide expert guidance and competitive pricing. We welcome partnerships with retailers, distributors, and corporate clients across Nigeria and beyond.\n\nNo.16 Onitsha Rd. Opp. Firstbank roundabout, Nnewi, Anambra State, Nigeria\n\nCall us: 0803 382 3778\n\nBusiness Hours: Monday - Friday: 8:00 AM - 5:00 PM, Saturday: 9:00 AM - 2:00 PM",
+      "imagePrompt": "Modern Nigerian business contact center, professional receptionist at sleek desk, bright welcoming office environment, communication equipment displays, Nnewi city elements visible through windows, business cards and brochures on table, professional corporate setting with blue accents, inviting atmosphere",
+      "layout": "default"
+    }
+  ],
+  "contact": {
+    "phone": "0803 382 3778",
+    "email": "info@gsmwizardng.com",
+    "address": "No.16 Onitsha Rd. Opp. Firstbank roundabout, Nnewi, Anambra State, Nigeria",
+    "whatsapp": "https://wa.me/2348033823778"
+  }
+}
