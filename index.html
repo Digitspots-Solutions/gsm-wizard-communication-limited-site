@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSM Wizard Communication Limited - Engineering Excellence in Communication Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #090b11;
+            --accent-color: #ee3918;
+            --bg-color: #F2EDE6;
+            --text-color: #0D1117;
+            --surface-color: #181e2a;
+            --secondary-accent: #99b4bc;
+            --font-display: 'Barlow Condensed', sans-serif;
+            --font-body: 'IBM Plex Sans', sans-serif;
+            --border-radius: 0px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(9, 11, 17, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            font-family: var(--font-display);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            right: -100%;
+            width: 300px;
+            height: calc(100vh - 70px);
+            background: var(--primary-color);
+            box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+            transition: right 0.3s ease;
+            z-index: 999;
+            padding: 2rem;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-menu ul a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .mobile-menu ul a:hover {
+            color: var(--accent-color);
+        }
+
+        section {
+            padding: 80px 2rem;
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        section:nth-child(2) { animation-delay: 0s; }
+        section:nth-child(3) { animation-delay: 0.1s; }
+        section:nth-child(4) { animation-delay: 0.2s; }
+        section:nth-child(5) { animation-delay: 0.3s; }
+        section:nth-child(6) { animation-delay: 0.4s; }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        #hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+            padding: 0;
+            margin-top: 0;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.pexels.com/photos/33790192/pexels-photo-33790192.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+
+        #hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--accent-color);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #c72f14;
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+        }
+
+        #about {
+            background: #fff;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            box-shadow: 8px 8px 0 var(--secondary-accent);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        #services {
+            background: var(--surface-color);
+            color: #fff;
+        }
+
+        #services .section-title {
+            color: #fff;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--primary-color);
+            padding: 2rem;
+            border-left: 4px solid var(--accent-color);
+            box-shadow: 4px 4px 0 rgba(238, 57, 24, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .service-card p {
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        #team {
+            background: #fff;
+        }
+
+        .team-content {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .team-content p {
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        #contact {
+            background: var(--bg-color);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .contact-info p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .contact-detail {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: #fff;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .contact-detail strong {
+            display: block;
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .contact-detail a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-detail a:hover {
+            color: var(--accent-color);
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #25D366;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+            box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background: #20ba5a;
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #fff;
+            font-size: 2rem;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            section {
+                padding: 48px 1.5rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image {
+                height: 300px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            nav {
+                padding: 1rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .mobile-menu {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">GSM Wizard</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>GSM Wizard Communication Limited</h1>
+            <p>Your Trusted Partner in Communication Manufacturing. Based in Nnewi, Anambra State, we deliver world-class communication equipment and solutions that power connectivity across Nigeria. Experience precision engineering, quality manufacturing, and unmatched reliability.</p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <img src="https://images.pexels.com/photos/32845696/pexels-photo-32845696.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="GSM Wizard Manufacturing Facility" class="about-image">
+                <div class="about-text">
+                    <p>GSM Wizard Communication Limited is a leading manufacturing company strategically located in Nnewi, the industrial hub of Anambra State. We specialize in the production and assembly of high-quality communication equipment, devices, and accessories that meet international standards.</p>
+                    <p>Our facility combines cutting-edge technology with skilled Nigerian craftsmanship to deliver products that drive digital connectivity across West Africa. With a commitment to innovation, quality control, and customer satisfaction, we have established ourselves as a trusted name in the communication manufacturing sector.</p>
+                    <p>Our team of experienced engineers and technicians work tirelessly to ensure every product leaving our factory meets the highest standards of performance and durability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Manufacturing of GSM Communication Devices</h3>
+                    <p>We produce a comprehensive range of mobile communication devices including smartphones, feature phones, and wireless communication equipment built to international quality standards.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Communication Equipment Assembly</h3>
+                    <p>Our facility handles complete assembly of communication hardware, from circuit board integration to final product testing and packaging.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Custom Manufacturing Solutions</h3>
+                    <p>We offer bespoke manufacturing services for businesses requiring specialized communication equipment tailored to specific market needs.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Quality Testing & Certification</h3>
+                    <p>Every product undergoes rigorous quality assurance testing to ensure reliability, durability, and compliance with Nigerian and international telecommunications standards.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Bulk Supply & Distribution</h3>
+                    <p>We provide wholesale supply of communication devices and equipment to retailers, distributors, and corporate clients across Nigeria.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Technical Support & Warranty Services</h3>
+                    <p>Comprehensive after-sales support including technical assistance, repairs, and warranty coverage for all manufactured products.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-content">
+                <p>At GSM Wizard Communication Limited, our strength lies in our people. Our team comprises highly skilled engineers, experienced production managers, certified quality control specialists, and dedicated support staff who bring years of manufacturing expertise to every project.</p>
+                <p>Trained in the latest communication technology and manufacturing processes, our workforce combines technical precision with Nigerian innovation. From our production floor to our management team, every member is committed to maintaining the excellence that has made us a trusted name in communication manufacturing.</p>
+                <p>We invest continuously in staff training and development to ensure we remain at the forefront of communication technology manufacturing in Nigeria.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Ready to discuss your communication equipment manufacturing needs? GSM Wizard Communication Limited is here to serve you. Visit our facility in Nnewi or reach out to us directly.</p>
+                    <p>Whether you need bulk orders, custom manufacturing solutions, or technical consultation, our team is ready to provide expert guidance and competitive pricing. We welcome partnerships with retailers, distributors, and corporate clients across Nigeria and beyond.</p>
+                    
+                    <div class="contact-detail">
+                        <strong>Address</strong>
+                        <p>No.16 Onitsha Rd. Opp. Firstbank roundabout, Nnewi, Anambra State, Nigeria</p>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <strong>Phone</strong>
+                        <p><a href="tel:08033823778">0803 382 3778</a></p>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <strong>Email</strong>
+                        <p><a href="mailto:info@gsmwizardng.com">info@gsmwizardng.com</a></p>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <strong>Business Hours</strong>
+                        <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                        <p>Saturday: 9:00 AM - 2:00 PM</p>
+                    </div>
+                    
+                    <a href="https://wa.me/2348033823778" class="whatsapp-btn" target="_blank">Message on WhatsApp</a>
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/9490626/pexels-photo-9490626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Contact GSM Wizard" style="width: 100%; height: 500px; object-fit: cover; box-shadow: 8px 8px 0 var(--secondary-accent);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 GSM Wizard Communication Limited. All Rights Reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/2348033823778" class="whatsapp-float" target="_blank">
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27.281 4.65C24.318 1.686 20.396 0.053 16.182 0.053C7.353 0.053 0.158 7.248 0.158 16.077C0.158 18.858 0.923 21.563 2.358 23.928L0 32L8.265 29.679C10.548 30.992 13.136 31.687 15.775 31.687H15.782C24.609 31.687 32 24.492 32 15.663C32 11.449 30.244 7.614 27.281 4.65ZM16.182 28.979C13.843 28.979 11.551 28.321 9.573 27.081L9.111 26.797L3.942 28.147L5.314 23.072L4.998 22.589C3.632 20.515 2.911 18.091 2.911 15.577C2.911 8.755 8.462 3.204 16.285 3.204C19.993 3.204 23.469 4.628 26.084 7.243C28.699 9.858 30.194 13.334 30.194 17.042C30.194 23.864 24.609 28.979 16.182 28.979ZM24.574 19.755C24.145 19.541 22.007 18.491 21.621 18.341C21.235 18.191 20.963 18.126 20.691 18.555C20.419 18.984 19.598 19.969 19.362 20.241C19.126 20.513 18.89 20.556 18.461 20.342C16.229 19.226 14.741 18.341 13.231 15.856C12.866 15.235 13.596 15.278 14.262 13.97C14.369 13.698 14.305 13.462 14.198 13.248C14.091 13.034 13.231 10.896 12.888 10.039C12.545 9.203 12.202 9.311 11.951 9.311C11.721 9.311 11.449 9.29 11.177 9.29C10.905 9.29 10.455 9.397 10.069 9.826C9.683 10.255 8.59 11.305 8.59 13.443C8.59 15.581 10.112 17.655 10.326 17.927C10.54 18.199 13.231 22.353 17.387 24.255C19.619 25.241 20.462 25.284 21.556 25.134C22.243 25.048 24.038 24.127 24.381 23.114C24.724 22.101 24.724 21.237 24.617 21.044C24.51 20.851 24.238 20.744 23.809 20.53L24.574 19.755Z" fill="white"/>
+        </svg>
+    </a>
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
