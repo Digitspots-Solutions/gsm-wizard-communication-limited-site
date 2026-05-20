@@ -1,49 +1,56 @@
 {
-  "businessName": "GSM Wizard Agent Banking Tech",
-  "industry": "Fintech & Digital Payments",
-  "tone": "professional, innovative, trustworthy",
-  "tagline": "Bridging the Financial Inclusion Gap Through Last-Mile Payment Solutions",
+  "businessName": "GSM Wizard Digital Payments Limited",
+  "industry": "Fintech",
+  "tone": "professional, trustworthy, innovative",
+  "tagline": "Your Trusted Partner in Digital Financial Solutions",
   "sections": [
     {
       "id": "hero",
-      "name": "Hero",
-      "copy": "GSM Wizard Agent Banking Tech: Your Trusted Partner in Last-Mile Financial Services. Empowering communities across Nigeria with secure, accessible digital payment solutions. From agent banking to seamless transactions, we bring financial services closer to you.",
-      "imagePrompt": "Modern Nigerian fintech office environment with diverse professionals using tablets and smartphones, vibrant blue and green color scheme, tech-forward atmosphere, Lagos or Abeokuta cityscape visible through windows, natural lighting, photorealistic, high-end professional photography",
+      "name": "Hero Section",
+      "copy": "GSM Wizard Digital Payments Limited - Empowering Nigeria's Digital Economy. We provide secure, fast, and reliable digital payment solutions that transform how businesses and individuals transact across Nigeria. Experience seamless payments, bill settlements, and financial services designed for the modern Nigerian economy.",
+      "imagePrompt": "Modern Nigerian fintech office interior with young African professionals working on computers and mobile devices, bright natural lighting, Lagos or Nnewi city skyline visible through windows, blue and green tech color scheme, professional business atmosphere, photorealistic, high quality",
       "layout": "centered"
     },
     {
       "id": "about",
       "name": "About Us",
-      "copy": "GSM Wizard Agent Banking Tech (also known as GSM Wizard Last-Mile Payments Co) is a forward-thinking fintech company dedicated to expanding financial inclusion across Nigeria. Based in Abeokuta, Ogun State, we specialize in agent banking services and last-mile payment solutions that bring essential financial services to underserved communities. Led by experienced professionals in crypto operations and digital finance, we combine cutting-edge technology with deep local market knowledge to create payment infrastructure that works for every Nigerian. Our mission is simple: to ensure that no one is left behind in Nigeria's digital economy transformation.",
-      "imagePrompt": "Professional Nigerian business team collaborating in modern office, mixture of young and experienced professionals, digital banking interfaces on screens, Abeokuta Ogun State local business district backdrop, warm professional lighting, authentic African business setting, photorealistic",
+      "copy": "GSM Wizard Digital Payments Limited (GSM Wizard PayTech Solutions) is a leading fintech company based in Nnewi, Anambra State, dedicated to revolutionizing digital financial services across Nigeria. We understand the unique challenges facing Nigerian businesses and individuals in accessing convenient, secure payment solutions. Our platform leverages cutting-edge technology to deliver instant bill payments, mobile top-ups, data subscriptions, and comprehensive digital financial services. With a commitment to financial inclusion and innovation, we're bridging the gap between traditional banking and the digital economy, making financial transactions accessible to everyone from small market traders to large enterprises. Our secure infrastructure and customer-first approach have made us a trusted name in Nigeria's rapidly growing fintech landscape.",
+      "imagePrompt": "Professional Nigerian business team in modern office, diverse group of African professionals in business attire discussing fintech solutions around a conference table, digital payment icons and graphs displayed on screens, Nnewi city background, warm professional lighting, corporate photography style, photorealistic",
       "layout": "split"
     },
     {
       "id": "services",
       "name": "Our Services",
-      "copy": "Agent Banking Solutions: We deploy and manage agent banking networks that bring banking services to communities without traditional bank branches. Our agents provide cash deposits, withdrawals, bill payments, and account opening services.\n\nLast-Mile Payment Infrastructure: Bridging the gap between financial institutions and end-users through innovative payment technology, ensuring transactions reach even the most remote locations.\n\nDigital Transaction Processing: Secure, fast, and reliable processing of digital payments including mobile money transfers, airtime purchases, and utility bill payments.\n\nCrypto Operations & Integration: Expert guidance and infrastructure for businesses looking to incorporate cryptocurrency and blockchain solutions into their payment ecosystems.\n\nAgent Network Management: Comprehensive training, monitoring, and support for agent banking networks to ensure service quality and compliance.\n\nFinancial Inclusion Consulting: Strategic advisory services for organizations seeking to expand their reach into underserved markets across Nigeria.",
-      "imagePrompt": "Grid of six diverse Nigerian scenarios: rural agent banking kiosk, mobile payment transaction on smartphone, crypto trading dashboard, community banking scene, digital payment terminal, fintech training session, vibrant colors, authentic Nigerian settings, photorealistic documentary style",
+      "copy": "Digital Payment Solutions: Instant bill payments for electricity, cable TV, internet subscriptions, and more. Process payments securely with real-time confirmations.\n\nMobile Airtime & Data: Purchase airtime and data bundles for all major Nigerian networks (MTN, Glo, Airtel, 9mobile) at competitive rates with instant delivery.\n\nBulk SMS Services: Reach your customers effectively with our reliable bulk SMS platform. Perfect for marketing campaigns, notifications, and customer engagement.\n\nWallet Services: Secure digital wallet for storing funds, making instant transfers, and managing your transactions efficiently.\n\nAgent Banking: Become a GSM Wizard agent and earn commissions by providing essential financial services in your community.\n\nBusiness Solutions: Customized payment integration APIs for businesses looking to accept digital payments and automate their financial operations.\n\nEducation Payments: Simplified payment solutions for exam pins, result checkers, and other educational services across Nigeria.",
+      "imagePrompt": "Split screen collage showing various Nigerian digital payment scenarios: person using smartphone for mobile banking, market vendor receiving digital payment on tablet, university student checking results online, family watching cable TV, all in authentic Nigerian settings, vibrant colors, photorealistic, modern lifestyle photography",
       "layout": "grid"
     },
     {
       "id": "why-choose-us",
       "name": "Why Choose GSM Wizard",
-      "copy": "Deep Market Expertise: Led by professionals with extensive experience in crypto operations and digital finance, we understand both traditional and emerging payment landscapes.\n\nLocal Knowledge, Global Standards: Based in Ogun State with nationwide reach, we combine local market insights with international best practices.\n\nProven Technology: Our robust payment infrastructure ensures secure, fast, and reliable transactions every time.\n\nFinancial Inclusion Focus: We're committed to bringing financial services to every Nigerian, particularly those in underserved communities.\n\nComprehensive Support: From initial setup to ongoing operations, we provide end-to-end support for all our partners and agents.\n\nRegulatory Compliance: Full adherence to CBN guidelines and Nigerian financial regulations, giving you peace of mind.",
-      "imagePrompt": "Split screen showing contrast between traditional Nigerian village market and modern digital payment technology, agents helping elderly customers with mobile banking, trust and professionalism evident, warm golden hour lighting, photorealistic, inspiring composition",
+      "copy": "Instant Transactions: All payments and services are processed in real-time, ensuring you never have to wait for confirmations or deliveries.\n\nSecure Platform: We employ bank-level security protocols and encryption to protect your financial data and transactions at all times.\n\nCompetitive Rates: Enjoy some of the most competitive pricing in the Nigerian fintech space, with transparent fees and no hidden charges.\n\n24/7 Availability: Our platform operates round-the-clock, allowing you to transact anytime, anywhere across Nigeria.\n\nReliable Support: Our dedicated Nigerian customer support team is always ready to assist you with any queries or concerns.\n\nWide Network Coverage: We support all major service providers and billers across Nigeria, giving you comprehensive access from one platform.\n\nEasy Integration: Businesses can seamlessly integrate our payment solutions through our developer-friendly APIs and documentation.\n\nTrusted by Thousands: Join thousands of satisfied customers and businesses who rely on GSM Wizard for their daily digital transactions.",
+      "imagePrompt": "Professional infographic style image showing Nigerian fintech benefits, icons representing security (padlock with Nigerian flag colors), speed (lightning bolt), 24/7 service (clock), mobile phone with transaction interface, shield with checkmark, green and blue color scheme, modern clean design, photorealistic elements",
       "layout": "cards"
     },
     {
       "id": "contact",
-      "name": "Get in Touch",
-      "copy": "Ready to expand financial access or partner with Nigeria's leading last-mile payment specialists? GSM Wizard Agent Banking Tech is here to help. Whether you're a financial institution looking to extend your reach, an entrepreneur interested in becoming an agent, or a business seeking payment solutions, we'd love to hear from you.\n\nVisit us at our office in Ilogbo, Abeokuta, or reach out via phone or WhatsApp. Let's build Nigeria's financial future together.",
-      "imagePrompt": "Modern Nigerian fintech office reception area, professional yet welcoming atmosphere, GSM Wizard branding visible, maps of Nigeria showing service coverage on walls, natural light, plants, comfortable seating area, photorealistic architectural photography",
+      "name": "Contact Us",
+      "copy": "Ready to experience seamless digital payments? Get in touch with GSM Wizard Digital Payments Limited today. Our team is here to answer your questions, assist with account setup, or discuss business partnership opportunities.\n\nVisit Us: No.16 Onitsha Rd. Opp. Firstbank roundabout, Nnewi, Anambra State, Nigeria\n\nCall Us: +234 803 382 3778\n\nBusiness Hours: Monday - Friday: 8:00 AM - 6:00 PM, Saturday: 9:00 AM - 3:00 PM\n\nWhether you're an individual looking for convenient payment solutions or a business seeking to integrate digital payments, we're here to help you navigate Nigeria's digital financial landscape with confidence.",
+      "imagePrompt": "Modern Nigerian fintech office reception area in Nnewi, professional African receptionist at sleek desk, GSM Wizard branding visible, comfortable waiting area, large windows showing Nigerian street view, contemporary interior design, warm welcoming atmosphere, business professional photography, photorealistic, high quality",
       "layout": "centered"
+    },
+    {
+      "id": "faq",
+      "name": "Frequently Asked Questions",
+      "copy": "How do I create an account with GSM Wizard? Simply visit our website at gsmwizard.org and click on 'Register'. Fill in your details, verify your phone number, and you're ready to start transacting within minutes.\n\nIs my money safe with GSM Wizard? Absolutely. We use advanced encryption and security protocols to protect all transactions. Our platform is built with bank-level security standards, and we're regulated to operate digital payment services in Nigeria.\n\nWhat payment methods do you accept? We accept bank transfers, card payments, and USSD transfers from all major Nigerian banks. You can easily fund your wallet using any of these convenient methods.\n\nHow quickly are transactions processed? Most transactions are instant. Airtime, data, and bill payments are typically completed within seconds. In rare cases of network delays from service providers, transactions may take up to 5 minutes.\n\nCan I become a GSM Wizard agent? Yes! We're always looking for reliable partners across Nigeria. Contact us to learn about our agent program, commission structure, and requirements.\n\nDo you offer business solutions? Yes, we provide API integration for businesses of all sizes. Whether you run an e-commerce platform or a retail business, we can help you accept digital payments seamlessly.\n\nWhat if I have a transaction issue? Our customer support team is available to resolve any issues promptly. Contact us via phone or WhatsApp, and we'll investigate and resolve your concern quickly.\n\nAre there transaction limits? Transaction limits depend on your account verification level. Fully verified accounts enjoy higher limits suitable for business operations.",
+      "imagePrompt": "Friendly Nigerian customer service representative wearing headset in modern call center, smiling while assisting customer, multiple computer screens showing GSM Wizard interface, professional office environment in Nigeria, bright welcoming atmosphere, corporate photography style, photorealistic",
+      "layout": "default"
     }
   ],
   "contact": {
-    "phone": "+234 803 923 6183",
+    "phone": "+234 803 382 3778",
     "email": "info@gsmwizard.org",
-    "address": "No 2 Age Street, Ilogbo, Abeokuta, Ogun State, Nigeria",
-    "whatsapp": "https://wa.me/2348039236183"
+    "address": "No.16 Onitsha Rd. Opp. Firstbank roundabout, Nnewi, Anambra State, Nigeria",
+    "whatsapp": "https://wa.me/2348033823778"
   }
 }
